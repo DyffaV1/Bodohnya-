@@ -1,1 +1,162 @@
-hacked by dyffawhtr11
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacked By DyffaWhtr11</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+        }
+
+        .anime-image {
+            width: 300px;
+            height: 100px;
+            object-fit: cover;
+            border: 2px solid #fff;
+            margin-bottom: 20px;
+        }
+
+        .hacker-title {
+            font-size: 2em;
+            margin: 10px 0;
+            letter-spacing: 3px;
+        }
+
+        .team-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            font-size: 1.3em;
+            line-height: 1.8;
+        }
+
+        .team-list li {
+            margin: 10px 0;
+        }
+
+        .music-player {
+            margin-top: 40px;
+            padding: 15px;
+            border-top: 1px dashed #fff;
+        }
+
+        audio {
+            width: 250px;
+            filter: invert(1);
+        }
+
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 1;
+            }
+            20%, 22%, 24%, 55% {
+                opacity: 0.5;
+            }
+        }
+
+        .flicker {
+            animation: flicker 3s linear infinite;
+        }
+
+        .matrix-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.03;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix" class="matrix-effect"></canvas>
+
+    <div class="container">
+        <img src="https://i.ibb.co/4nn20XNN/20250806-230758.jpg" alt="Anime" class="anime-image">
+        
+        <div class="hacker-title flicker">&lt;&gt; Hacked By DyffaWhtr11 &lt;/&gt;</div>
+        
+        <ul class="team-list">
+            <li>   Hi DyffaWhtr Im Here
+Touch By DyffaWhtr11 Attack di lakukan pada
+                <li>  hari sabtu 9/8/2025 -</li>
+            <li>[#]STEM-EAGLE ERROR SYSTEM</li>
+            <li>ETHERSEC TEAM - Xenowhtr11 </li>
+        </ul>
+        
+        <div class="music-player">
+            <audio controls autoplay loop>
+                <source src="https://github.com/DyffaV1/Allgame123/raw/154c216340a255dc884b4953618a71fbf7e4b78b/SaveTik.co_7339593559957458208.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        // White matrix effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const chars = "01";
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        
+        const drops = [];
+        for (let i = 0; i < columns; i++) {
+            drops[i] = Math.random() * canvas.height / fontSize;
+        }
+        
+        function draw() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = "#ffffff";
+            ctx.font = fontSize + "px monospace";
+            
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                
+                drops[i]++;
+            }
+        }
+        
+        setInterval(draw, 33);
+
+        // Random flicker effect for team list
+        const teamItems = document.querySelectorAll('.team-list li');
+        setInterval(() => {
+            teamItems.forEach(item => {
+                if (Math.random() > 0.85) {
+                    item.style.opacity = Math.random() * 0.7 + 0.3;
+                } else {
+                    item.style.opacity = 1;
+                }
+            });
+        }, 300);
+    </script>
+</body>
+</html>

@@ -24,39 +24,62 @@
         }
 
         .anime-image {
-            width: 300px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
             object-fit: cover;
             border: 2px solid #fff;
-            margin-bottom: 20px;
+            border-radius: 50%;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px #fff;
         }
 
         .hacker-title {
-            font-size: 2em;
-            margin: 10px 0;
-            letter-spacing: 3px;
+            font-size: 2.5em;
+            margin: 20px 0;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px #fff;
         }
 
         .team-list {
             list-style-type: none;
             padding: 0;
-            margin: 20px 0;
-            font-size: 1.3em;
-            line-height: 1.8;
+            margin: 30px 0;
+            font-size: 1.5em;
+            line-height: 2.0;
         }
 
         .team-list li {
-            margin: 10px 0;
+            margin: 15px 0;
+            padding: 5px;
+        }
+
+        .message {
+            font-size: 1.8em;
+            margin: 25px 0;
+            color: #ff5555;
+            text-transform: uppercase;
+        }
+
+        .date {
+            font-size: 1.3em;
+            color: #55ff55;
+            margin-bottom: 20px;
+        }
+
+        .team-name {
+            font-size: 1.4em;
+            color: #5555ff;
+            margin-top: 30px;
         }
 
         .music-player {
             margin-top: 40px;
-            padding: 15px;
+            padding: 20px;
             border-top: 1px dashed #fff;
         }
 
         audio {
-            width: 250px;
+            width: 300px;
             filter: invert(1);
         }
 
@@ -80,7 +103,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            opacity: 0.03;
+            opacity: 0.05;
         }
     </style>
 </head>
@@ -88,17 +111,17 @@
     <canvas id="matrix" class="matrix-effect"></canvas>
 
     <div class="container">
-        <img src="https://i.ibb.co/4nn20XNN/20250806-230758.jpg" alt="Anime" class="anime-image">
+        <img src="https://i.ibb.co/wh09hLpF/20250809-175339.jpg" alt="Anime" class="anime-image">
         
-        <div class="hacker-title flicker">&lt;&gt; Hacked By DyffaWhtr11 &lt;/&gt;</div>
+        <div class="hacker-title flicker">&lt;&gt; HACKED BY DYFFAWHTR11 &lt;/&gt;</div>
         
-        <ul class="team-list">
-            <li>   Hi DyffaWhtr Im Here
-Touch By DyffaWhtr11 Attack di lakukan pada
-                <li>  hari sabtu 9/8/2025 -</li>
-            <li>[#]STEM-EAGLE ERROR SYSTEM</li>
-            <li>ETHERSEC TEAM - Xenowhtr11 </li>
-        </ul>
+        <div class="message">Hi DyffaWhtr Im Here</div>
+        <div class="message">Touch By DyffaWhtr11</div>
+        
+        <div class="date">Attack dilakukan pada hari sabtu 9/8/2025</div>
+        
+        <div class="team-name">[#] STEM-EAGLE ERROR SYSTEM</div>
+        <div class="team-name">ETHERSEC TEAM - Xenowhtr11</div>
         
         <div class="music-player">
             <audio controls autoplay loop>
@@ -116,8 +139,8 @@ Touch By DyffaWhtr11 Attack di lakukan pada
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         
-        const chars = "01";
-        const fontSize = 14;
+        const chars = "01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
+        const fontSize = 18;
         const columns = canvas.width / fontSize;
         
         const drops = [];
@@ -146,14 +169,16 @@ Touch By DyffaWhtr11 Attack di lakukan pada
         
         setInterval(draw, 33);
 
-        // Random flicker effect for team list
-        const teamItems = document.querySelectorAll('.team-list li');
+        // Random flicker effect for elements
+        const elements = document.querySelectorAll('.message, .date, .team-name');
         setInterval(() => {
-            teamItems.forEach(item => {
+            elements.forEach(item => {
                 if (Math.random() > 0.85) {
                     item.style.opacity = Math.random() * 0.7 + 0.3;
+                    item.style.textShadow = `0 0 ${Math.random() * 20}px currentColor`;
                 } else {
                     item.style.opacity = 1;
+                    item.style.textShadow = 'none';
                 }
             });
         }, 300);

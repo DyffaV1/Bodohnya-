@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EmanStore - Top Up Game MLBB, Free Fire, PUBG, eFootball, Roblox</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -328,65 +325,7 @@
                 text-shadow: 0 0 5px var(--neon-purple), 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple);
             }
             50% {
-                text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue);
-            }
-        }
-
-        .neon-text {
-            animation: neon 1.5s ease-in-out infinite alternate;
-            color: white;
-        }
-
-        /* Login/Signup form */
-        .auth-container {
-            max-width: 500px;
-            margin: 50px auto;
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .auth-title {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        /* Order receipt */
-        .receipt {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .receipt-header {
-            text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 2px dashed #eee;
-            padding-bottom: 15px;
-        }
-
-        .receipt-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-
-        .receipt-total {
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 2px dashed #eee;
-        }
-    </style>
-</head>
-<body>
+                text-shadow: 0 0 10px var(--neon-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
@@ -394,11 +333,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Dashboard</a>
-                    </li>
-                    <li class="nav-item">
+                <ul class="navbar-nav me-auto"><li class="nav-item">nk active" href="#"><i class="fas fa-home me-1"></i> Dashboai class="nav-
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#productsModal"><i class="fas fa-gamepad me-1"></i> List Produk</a>
                     </li>
                     <li class="nav-item">
@@ -1195,7 +1130,7 @@
                     </div>
                     <div class="alert alert-warning">
                         <h6><i class="fas fa-exclamation-triangle me-2"></i> Maintenance Notice</h6>
-                        <p>Server maintenance scheduled for tomorrow 2AM-4AM.</p>
+                        <p>website ini akan di hack.</p>
                         <small class="text-muted">1 day ago</small>
                     </div>
                     <div class="alert alert-success">
@@ -1382,9 +1317,7 @@
                                 <option value="5637">💎 5637 Diamond → RM341</option>
                                 <option value="5707">💎 5707 Diamond → RM345</option>
                                 <option value="5854">💎 5854 Diamond → RM361</option>
-                                <option value="5966">💎 5966 Diamond → RM362</option>
-                                <option value="6092">💎 6092 Diamond → RM370</option>
-                                <option value="6236">💎 6236 Diamond → RM378</option>
+                                <option value="5966">💎 59→ RM378</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -1942,35 +1875,7 @@
             message += `Terima kasih!`;
 
             // Encode message for WhatsApp URL
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/60175180249?text=${encodedMessage}`;
+            const encodedMessage = encodeURIC
 
             // Open WhatsApp in new tab
-            window.open(whatsappUrl, '_blank');
-
-            // Close modal
-            const modal = bootstrap.Modal.getInstance(document.querySelector(`#${game.toLowerCase().replace(' ', '')}Modal`));
-            modal.hide();
-
-            // Show success alert
-            alert(`Pesanan ${game} Anda berhasil dibuat (No. Pesanan: ${orderNumber}). Silahkan lanjutkan pembayaran via WhatsApp.`);
-        }
-
-        // Search functionality
-        document.querySelector('.search-box input').addEventListener('keyup', function(e) {
-            if (e.key === 'Enter') {
-                const query = this.value.toLowerCase();
-                const games = ['mlbb', 'free fire', 'pubg', 'efootball', 'roblox', 'manual update'];
-
-                if (games.includes(query)) {
-                    const modalId = query.replace(' ', '') + 'Modal';
-                    const modal = new bootstrap.Modal(document.getElementById(modalId));
-                    modal.show();
-                } else {
-                    alert('Game tidak ditemukan. Coba cari dengan nama game yang benar (MLBB, Free Fire, PUBG, eFootball, Roblox, Manual Update)');
-                }
-            }
-        });
-    </script>
-</body>
-</html>
+            window.o

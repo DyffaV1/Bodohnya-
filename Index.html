@@ -1,21 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacked By DyffaWhtr11</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
 
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+        }
+
+        .anime-image {
+            width: 300px;
+            height: 100px;
+            object-fit: cover;
+            border: 2px solid #fff;
+            margin-bottom: 20px;
+        }
+
+        .hacker-title {
+            font-size: 2em;
+            margin: 10px 0;
+            letter-spacing: 3px;
+        }
+
+        .team-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            font-size: 1.3em;
+            line-height: 1.8;
+        }
+
+        .team-list li {
+            margin: 10px 0;
+        }
+
+        .music-player {
+            margin-top: 40px;
+            padding: 15px;
+            border-top: 1px dashed #fff;
+        }
+
+        audio {
+            width: 250px;
+            filter: invert(1);
+        }
+
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 1;
+            }
+            20%, 22%, 24%, 55% {
+                opacity: 0.5;
+            }
+        }
+
+        .flicker {
+            animation: flicker 3s linear infinite;
+        }
+
+        .matrix-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.03;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix" class="matrix-effect"></canvas>
+
+    <div class="container">
+        <img src="https://i.ibb.co/4nn20XNN/20250806-230758.jpg" alt="Anime" class="anime-image">
+        
+        <div class="hacker-title flicker">&lt;&gt; Hacked By DyffaWhtr11 &lt;/&gt;</div>
+        
+        <ul class="team-list">
+            <li>   Hi DyffaWhtr Im Here
+Touch By DyffaWhtr11 Attack di lakukan 
+                <li> pada hari jumaat 8/8/2025 -</li>
+            <li>[#]STEM-EAGLE ERROR SYSTEM</li>
+            <li>ETHERSEC TEAM - Xenowhtr11 </li>
+        </ul>
+        
+        <div class="music-player">
+            <audio controls autoplay loop>
+                <source src="https://github.com/DyffaV1/Allgame123/raw/154c216340a255dc884b4953618a71fbf7e4b78b/SaveTik.co_7339593559957458208.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        // White matrix effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const chars = "01";
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        
+        const drops = [];
+        for (let i = 0; i < columns; i++) {
+            drops[i] = Math.random() * canvas.height / fontSize;
+        }
+        
+        function draw() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = "#ffffff";
+            ctx.font = fontSize + "px monospace";
+            
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                
+                drops[i]++;
+            }
+        }
+        
+        setInterval(draw, 33);
+
+        // Random flicker effect for team list
+        const teamItems = document.querySelectorAll('.team-list li');
+        setInterval(() => {
+            teamItems.forEach(item => {
+                if (Math.random() > 0.85) {
+                    item.style.opacity = Math.random() * 0.7 + 0.3;
+                } else {
+                    item.style.opacity = 1;
+                }
+            });
+        }, 300);
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelBro Premium Apps</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a6bff;
+            margin-bottom: 10px;
+        }
+        
+        /* Banner Slider */
+        .banner-slider {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .banner-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .banner-slide.active {
+            opacity: 1;
+        }
+        
+        .banner-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* App Selection Tabs */
+        .app-tabs {
+            display: flex;
+            overflow-x: auto;
+            gap: 5px;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+        
+        .app-tab {
+            padding: 10px 15px;
+            background-color: #eee;
+            border-radius: 8px;
+            cursor: pointer;
+            white-space: nowrap;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .app-tab.active {
+            background-color: #4a6bff;
+            color: white;
+        }
+        
+        /* App Package Section */
+        .app-section {
+            display: none;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .app-section.active {
+            display: block;
+        }
+        
+        .app-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #4a6bff;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .app-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .package-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .package-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid #eee;
+        }
+        
+        .package-option:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .package-option.selected {
+            border: 2px solid #4a6bff;
+            background-color: #f0f5ff;
+        }
+        
+        .package-name {
+            font-weight: bold;
+        }
+        
+        .package-price {
+            color: #4a6bff;
+            font-weight: bold;
+        }
+        
+        /* Price Summary */
+        .price-summary {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .price-label {
+            font-weight: bold;
+        }
+        
+        .price-value {
+            color: #4a6bff;
+            font-weight: bold;
+        }
+        
+        .total {
+            font-size: 18px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Payment Methods */
+        .payment-methods {
+            margin-bottom: 20px;
+        }
+        
+        .payment-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .payment-option {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .payment-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .payment-option.selected {
+            border: 2px solid #4a6bff;
+        }
+        
+        .payment-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #4a6bff;
+        }
+        
+        .payment-details {
+            flex-grow: 1;
+        }
+        
+        .payment-name {
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        
+        .payment-info {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Contact Buttons */
+        .contact-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .contact-btn.whatsapp {
+            background-color: #25D366;
+        }
+        
+        .contact-btn.telegram {
+            background-color: #0088cc;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        /* Order Button */
+        .order-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #4a6bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        
+        .order-btn:hover {
+            background-color: #3a5bef;
+        }
+        
+        .order-btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .description {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .note {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        .hot-badge {
+            background-color: #ff4757;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">PixelBro Premium Apps</div>
+            <p>Get premium access to your favorite apps</p>
+        </header>
+        
+        <!-- Banner Slider -->
+        <div class="banner-slider">
+            <div class="banner-slide active">
+                <img src="https://i.ibb.co/h18P0Wrw/20250808-145933.jpg" alt="Premium Apps 2025">
+            </div>
+            <div class="banner-slide">
+                <img src="https://i.ibb.co/ybc4dgS/20250808-151739.jpg" alt="Best Prices">
+            </div>
+        </div>
+        
+        <!-- Contact Buttons -->
+        <div class="contact-buttons">
+            <a href="https://wa.me/60103635704" class="contact-btn whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://t.me/a10Days" class="contact-btn telegram">
+                <i class="fab fa-telegram"></i> Telegram
+            </a>
+        </div>
+        
+        <!-- App Selection Tabs -->
+        <div class="app-tabs">
+            <div class="app-tab active" data-app="netflix">Netflix</div>
+            <div class="app-tab" data-app="disney">Disney+</div>
+            <div class="app-tab" data-app="prime">Prime Video</div>
+            <div class="app-tab" data-app="youtube">YouTube Premium</div>
+            <div class="app-tab" data-app="viu">Viu Premium</div>
+            <div class="app-tab" data-app="canva">Canva Pro</div>
+            <div class="app-tab" data-app="capcut">CapCut Pro</div>
+            <div class="app-tab" data-app="alight">Alight Motion</div>
+            <div class="app-tab" data-app="spotify">Spotify</div>
+            <div class="app-tab" data-app="chatgpt">ChatGPT Plus</div>
+        </div>
+        
+        <!-- Netflix Section -->
+        <div class="app-section active" id="netflix-section">
+            <div class="app-title">
+                <div class="app-icon" style="background-color: #E50914;">N</div>
+                Netflix Premium
+            </div>
+            
+            <div class="package-options">
+                <div class="package-option" data-price="10">
+                    <span class="package-name">1 Month (1 device)</span>
+                    <span class="package-price">RM10 <span class="hot-badge">HOT</span></span>
+                </div>
+                <div class="package-option" data-price="19">
+                    <span class="package-name">2 Months (1 device)</span>
+                    <span class="package-price">RM19</span>
+                </div>
+                <div class="package-option" data-price="29">
+                    <span class="package-name">3 Months (1 device)</span>
+                    <span class="package-price">RM29</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Disney+ Section -->
+        <div class="app-section" id="disney-section">
+            <div class="app-title">
+                <div class="app-icon" style="background-color: #113CCF;">D</div>
+                Disney+ Premium
+            </div>
+            
+            <div class="package-options">
+                <div class="package-option" data-price="11">
+                    <span class="package-name">1 Month Sharing (1 device)</span>
+                    <span class="package-price">RM11</span>
+                </div>
+                <div class="package-option" data-price="21">
+                    <span class="package-name">2 Months Sharing (1 device)</span>
+                    <span class="package-price">RM21</span>
+                </div>
+                <div class="package-option" data-price="26">
+                    <span class="package-name">3 Months Sharing (1 device)</span>
+                    <span class="package-price">RM26</span>
+                </div>
+                <div class="package-option" data-price="15">
+                    <span class="package-name">1 Month Private (1 device)</span>
+                    <span class="package-price">RM15</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Prime Video Section -->
+        <div class="app-section" id="prime-section">
+            <div class="app-title">
+                <div class="app-icon" style="background-color: #00A8E1;">P</div>
+                Prime Video
+            </div>
+            
+            <div class="package-options">
+                <div class="package-option" data-price="10">
+                    <span class="package-name">1 Month Private</span>
+                    <span class="package-price">RM10</span>
+                </div>
+                <div class="package-option" data-price="25">
+                    <span class="package-name">3 Months Private</span>
+                    <span class="package-price">RM25</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- YouTube Premium Section -->
+        <div class="app-section" id="youtube-section">
+            <div class="app-title">
+                <div class="app-icon" style="background-color: #FF0000;">Y</div>
+                YouTube Premium
+            </div>
+            
+            <div class="package-options">
+                <div class="package-option" data-price="5">
+                    <span class="package-name">FAMPLAN 1 Month</span>
+                    <span class="package-price">RM5</span>
+                </div>
+                <div class="package-option" data-price="15">
+                    <span class="package-name">FAMPLAN 3 Months</span>
+                    <span class="package-price">RM15</span>
+                </div>
+                <div class="package-option" data-price="7">
+                    <span class="package-name">INDIVPLAN 1 Month</span>
+                    <span class="package-price">RM7</span>
+                </div>
+                <div class="package-option" data-price="20">
+                    <span class="package-name">INDIVPLAN 3 Months</span>
+                    <span class="package-price">RM20</span>
+                </div>
+            </div>
+            <p class="note">For INDIVPLAN: email will be provided by seller</p>
+        </div>
+        
+        <!-- Viu Premium Section -->
+        <div class="app-section" id="viu-section">
+            <div class="app-title">
+                <div class="app-icon" style="background-color: #FFD100; color: #333;">V</div>
+                Viu Premium
+            </div>
+            
+            <div class="package-options">
+                <div class="package-option" data-price="10">
+                    <span class="package-name">1 Month Sharing</span>
+                    <span class="package-price">RM10</span>
+                </div>
+                <div class="package-option" data-price="19">
+                    <span class="package-name">2 Months Sharing</span>
+                    <span class="package-price">RM19</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Canva Pro Section -->
+        <div class="app-section" id="canva-section">
+            <div class="app-title">
+                <div class="app-icon" style="background-color: #00C4CC;">C</div>
+                Canva Pro
+            </div>
+            
+            <div class="package-options">
+                <div class="package-option" data-price="0.5">
+                    <span class="package-name">1 Week Member</span>
+                    <span class="package-price">RM0.50</span>
+                </div>
+                <div class="package-option" data-price="4">
+                    <span class="package-name">6 Months Member</span>
+                    <span class="package-price">RM4</span>
+                </div>
+                <div class="package-option" data-price="5">
+                    <span class="package-name">1 Month Admin</span>
+                    <span class="package-price">RM5</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CapCut Pro Section -->
+        <div class="app-section" id="capcut-section">
+            <div class="app-title">
+                <div class="app-icon" style="background-color: #9C27B0;">C</div>
+                CapCut Pro
+            </div>
+            
+            <div class="package-options">
+                <div class="package-option" data-price="5">
+                    <span class="package-name">1 Month Sharing</span>
+                    <span class="package-price">RM5</span>
+                </div>
+                <div class="package-option" data-price="13">
+                    <span class="package-name">3 Months Sharing</span>
+                    <span class="package-price">RM13</span>
+                </div>
+                <div class="package-option" data-price="10">
+                    <span class="package-name">1 Month Private</span>
+                    <span class="package-price">RM10</span>
+                </div>
+                <div class="package-option" data-price="29">
+                    <span class="package-name">3 Months Private</span>
+                    <span class="package-price">RM29</span>
+                </div>
+            </div>
+            <p class="note">Sharing plan: login to 1 device only!</p>
+        </div>
+        
+        <!-- Alight Motion Section -->
+        <div class="app-section" id="alight-section">
+            <div class="app-title">
+                <div class="app-icon" style="background-color: #2196F3;">A</div>
+                Alight Motion Premium
+            </div>
+            
+            <div class="package-options">
+                <div class="package-option" data-price="5">
+                    <span class="package-name">1 Year Sharing</span>
+                    <span class="package-price">RM5</span>
+                </div>
+                <div class="package-option" data-price="8">
+                    <span class="package-name">1 Year Private</span>
+                    <span class="package-price">RM8</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Spotify Section -->
+        <div class="app-section" id="spotify-section">
+            <div class="app-title">
+                <div class="app-icon" style="background-color: #1DB954;">S</div>
+                Spotify Premium
+            </div>
+            
+            <div class="package-options">
+                <div class="package-option" data-price="13">
+                    <span class="package-name">INDPLAN 1 Month</span>
+                    <span class="package-price">RM13</span>
+                </div>
+                <div class="package-option" data-price="10">
+                    <span class="package-name">FAMPLAN 1 Month</span>
+                    <span class="package-price">RM10</span>
+                </div>
+            </div>
+            <p class="note">For INDPLAN: email will be provided by seller</p>
+        </div>
+        
+        <!-- ChatGPT Plus Section -->
+        <div class="app-section" id="chatgpt-section">
+            <div class="app-title">
+                <div class="app-icon" style="background-color: #10A37F;">C</div>
+                ChatGPT Plus
+            </div>
+            
+            <div class="package-options">
+                <div class="package-option" data-price="10">
+                    <span class="package-name">1 Month</span>
+                    <span class="package-price">RM10</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Price Summary -->
+        <div class="price-summary">
+            <div class="price-title">Ringkasan Pembayaran</div>
+            
+            <div class="price-item">
+                <span class="price-label">Harga Paket</span>
+                <span class="price-value" id="packagePrice">RM 0</span>
+            </div>
+            
+            <div class="price-item">
+                <span class="price-label">Fee</span>
+                <span class="price-value">RM 1.00</span>
+            </div>
+            
+            <div class="price-item total">
+                <span class="price-label">Total Pembayaran</span>
+                <span class="price-value" id="totalPrice">RM 1.00</span>
+            </div>
+        </div>
+        
+        <!-- Payment Methods -->
+        <div class="payment-methods">
+            <div class="payment-title">Pilih Metode Pembayaran:</div>
+            
+            <div class="payment-option selected" data-method="tng">
+                <div class="payment-icon">
+                    <i class="fas fa-wallet"></i>
+                </div>
+                <div class="payment-details">
+                    <div class="payment-name">TOUCH 'n GO eWallet</div>
+                    <div class="payment-info">Pembayaran menggunakan e-wallet</div>
+                </div>
+            </div>
+            
+            <div class="payment-option" data-method="duitnow">
+                <div class="payment-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="payment-details">
+                    <div class="payment-name">DuitNow</div>
+                    <div class="payment-info">Transfer bank atau QR code</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Order Button -->
+        <button class="order-btn" id="orderButton" disabled>Pesan Sekarang</button>
+        
+        <footer>
+            <p>© 2025-2027 PixelBro Premium Apps. All rights reserved.</p>
+            <p>Contact: WhatsApp +60 10-363 5704 | Telegram @a10Days</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Banner Slider
+        let currentBanner = 0;
+        const banners = document.querySelectorAll('.banner-slide');
+        
+        function showBanner(n) {
+            banners.forEach(banner => banner.classList.remove('active'));
+            banners[n].classList.add('active');
+        }
+        
+        function nextBanner() {
+            currentBanner = (currentBanner + 1) % banners.length;
+            showBanner(currentBanner);
+        }
+        
+        // Change banner every 3 seconds
+        setInterval(nextBanner, 3000);
+        
+        // App Tab Selection
+        const appTabs = document.querySelectorAll('.app-tab');
+        const appSections = document.querySelectorAll('.app-section');
+        
+        appTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const appId = this.dataset.app;
+                
+                // Update active tab
+                appTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Show corresponding section
+                appSections.forEach(section => section.classList.remove('active'));
+                document.getElementById(`${appId}-section`).classList.add('active');
+                
+                // Reset selected package
+                const packages = document.querySelectorAll('.package-option');
+                packages.forEach(pkg => pkg.classList.remove('selected'));
+                
+                // Reset price display
+                document.getElementById('packagePrice').textContent = 'RM 0';
+                document.getElementById('totalPrice').textContent = 'RM 1.00';
+                
+                // Disable order button
+                document.getElementById('orderButton').disabled = true;
+            });
+        });
+        
+        // Package Selection
+        const packageOptions = document.querySelectorAll('.package-option');
+        const packagePriceEl = document.getElementById('packagePrice');
+        const totalPriceEl = document.getElementById('totalPrice');
+        const orderButton = document.getElementById('orderButton');
+        
+        let selectedPackagePrice = 0;
+        const fixedFee = 1.00;
+        
+        packageOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove selection from all packages
+                packageOptions.forEach(opt => opt.classList.remove('selected'));
+                
+                // Select current package
+                this.classList.add('selected');
+                
+                // Update prices
+                selectedPackagePrice = parseFloat(this.dataset.price);
+                updatePrices();
+                
+                // Enable order button
+                orderButton.disabled = false;
+            });
+        });
+        
+        function updatePrices() {
+            packagePriceEl.textContent = `RM ${selectedPackagePrice.toFixed(2)}`;
+            
+            const total = selectedPackagePrice + fixedFee;
+            totalPriceEl.textContent = `RM ${total.toFixed(2)}`;
+        }
+        
+        // Payment Method Selection
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                paymentOptions.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+        
+        // WhatsApp Order
+        orderButton.addEventListener('click', function() {
+            const selectedAppTab = document.querySelector('.app-tab.active');
+            const selectedPackage = document.querySelector('.package-option.selected');
+            const selectedMethod = document.querySelector('.payment-option.selected').dataset.method;
+            
+            let appName = selectedAppTab.textContent;
+            let packageName = selectedPackage.querySelector('.package-name').textContent;
+            let packagePrice = selectedPackage.dataset.price;
+            
+            let paymentName = '';
+            if (selectedMethod === 'tng') {
+                paymentName = 'TOUCH \'n GO eWallet';
+            } else if (selectedMethod === 'duitnow') {
+                paymentName = 'DuitNow';
+            }
+            
+            const totalPrice = (parseFloat(packagePrice) + fixedFee).toFixed(2);
+            
+            const message = `Halo, saya ingin memesan premium app dari PixelBro.\n\n` +
+                            `App: ${appName}\n` +
+                            `Paket: ${packageName}\n` +
+                            `Harga: RM ${packagePrice}\n` +
+                            `Fee: RM ${fixedFee.toFixed(2)}\n` +
+                            `Total: RM ${totalPrice}\n` +
+                            `Metode Pembayaran: ${paymentName}\n\n` +
+                            `Silakan berikan instruksi pembayaran.`;
+            
+            const whatsappUrl = `https://wa.me/60103635704?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EmanStore - Top Up Game MLBB, Free Fire, PUBG, eFootball, Roblox</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #8e44ad;
-            --secondary: #5c6bc0;
-            --dark: #c770f0;
-            --light: #ecf0f3;
-            --success: #00cec9;
-            --danger: #e17055;
-            --warning: #ffeaa7;
-            --neon-purple: #bc13fe;
-            --neon-blue: #1b03a3;
+    <link rel="styles
         }
 
         body {

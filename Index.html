@@ -3,187 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacked By NovaWhtr11</title>
+    <title>hcked by OhmyNova044</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+        
         body {
             background-color: #000;
             color: #fff;
-            font-family: 'Courier New', monospace;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90%;
+        
+        /* Header dengan background putih */
+        .header {
+            background-color: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        .anime-image {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border: 2px solid #fff;
-            border-radius: 50%;
-            margin-bottom: 30px;
-            box-shadow: 0 0 20px #fff;
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
         }
-
-        .hacker-title {
-            font-size: 2.5em;
-            margin: 20px 0;
-            letter-spacing: 5px;
-            text-shadow: 0 0 10px #fff;
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
         }
-
-        .team-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 30px 0;
-            font-size: 1.5em;
-            line-height: 2.0;
+        
+        .nav-menu a:hover {
+            background-color: #f0f0f0;
         }
-
-        .team-list li {
-            margin: 15px 0;
-            padding: 5px;
+        
+        /* Konten utama - Layout kemas */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
         }
-
-        .message {
-            font-size: 1.8em;
-            margin: 25px 0;
-            color: #ff5555;
-            text-transform: uppercase;
-        }
-
-        .date {
-            font-size: 1.3em;
-            color: #55ff55;
+        
+        /* Logo besar di halaman utama */
+        .main-logo {
+            width: 180px;
+            height: auto;
             margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(255,0,0,0.5));
         }
-
-        .team-name {
-            font-size: 1.4em;
-            color: #5555ff;
+        
+        /* Bagian deface - Layout teratur */
+        .deface-section {
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .hacker-title {
+            font-size: 36px;
+            color: #ff0000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .warning-banner {
+            background-color: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff0000;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .warning-label {
+            color: #ff9900;
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .warning-message {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        
+        /* Daftar pesan hacker - Layout rapi */
+        .message-list {
+            background-color: rgba(40, 40, 40, 0.8);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 5px;
+            text-align: left;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .message-list ul {
+            list-style-type: none;
+        }
+        
+        .message-list li {
+            padding: 10px 15px;
+            margin: 8px 0;
+            border-left: 3px solid #ff0000;
+            background-color: rgba(30, 30, 30, 0.7);
+            font-size: 16px;
+            color: #ffcc00;
+        }
+        
+        /* Hashtag section - Layout kemas */
+        .hashtag-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+            padding: 15px;
+        }
+        
+        .hashtag {
+            color: #00ffff;
+            font-size: 16px;
+            padding: 8px 15px;
+            background-color: rgba(0, 100, 100, 0.3);
+            border-radius: 4px;
+        }
+        
+        /* Syahadat section */
+        .syahadat-box {
+            background-color: rgba(100, 100, 0, 0.2);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 700px;
+        }
+        
+        .syahadat-text {
+            font-size: 20px;
+            color: #ffff00;
+            direction: rtl;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        .hacker-footer {
+            background-color: rgba(20, 0, 0, 0.9);
+            padding: 15px;
+            text-align: center;
+            border-top: 1px solid #ff0000;
             margin-top: 30px;
         }
-
-        .music-player {
-            margin-top: 40px;
-            padding: 20px;
-            border-top: 1px dashed #fff;
+        
+        .footer-text {
+            color: #ff0000;
+            font-size: 16px;
         }
-
-        audio {
-            width: 300px;
-            filter: invert(1);
-        }
-
-        @keyframes flicker {
-            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-                opacity: 1;
+        
+        /* Responsif untuk mobile */
+        @media (max-width: 768px) {
+            .nav-menu {
+                gap: 15px;
             }
-            20%, 22%, 24%, 55% {
-                opacity: 0.5;
+            
+            .nav-menu a {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+            
+            .main-logo {
+                width: 140px;
+            }
+            
+            .hacker-title {
+                font-size: 28px;
+            }
+            
+            .warning-label {
+                font-size: 18px;
+            }
+            
+            .warning-message {
+                font-size: 16px;
+            }
+            
+            .message-list {
+                padding: 15px;
+            }
+            
+            .message-list li {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+            
+            .syahadat-text {
+                font-size: 18px;
+            }
+            
+            .hashtag {
+                font-size: 14px;
+                padding: 6px 12px;
             }
         }
-
-        .flicker {
-            animation: flicker 3s linear infinite;
+        
+        @media (max-width: 480px) {
+            .hacker-title {
+                font-size: 24px;
+            }
+            
+            .main-logo {
+                width: 310px;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .hashtag-container {
+                gap: 10px;
+            }
         }
-
-        .matrix-effect {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.05;
+        
+        /* Untuk desktop */
+        @media (min-width: 1024px) {
+            .main-content {
+                padding: 50px 40px;
+            }
+            
+            .main-logo {
+                width: 200px;
+            }
+            
+            .hacker-title {
+                font-size: 42px;
+            }
         }
     </style>
 </head>
 <body>
-    <canvas id="matrix" class="matrix-effect"></canvas>
-
-    <div class="container">
-        <img src="https://i.ibb.co/6cncPBnp/b8527194ec8c83f26ef92d0df9e88048.jpg" alt="Anime" class="anime-image">
+    <!-- Header dengan background putih -->
+    <header class="header">
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Produk</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Konten utama -->
+    <main class="main-content">
+        <!-- Logo besar di halaman utama -->
+        <img src="https://i.ibb.co/QBmXDgc/Gemini-Generated-Image-8603fj8603fj8603-removebg-preview.png" alt="Hacker Logo" class="main-logo">
         
-        <div class="hacker-title flicker">&lt;&gt; HACKED BY NOVAWHTR11 &lt;/&gt;</div>
-        
-        <div class="message"> NovaWhtr jika kamu takut
-        dengan risiko jangan pernah mencuba</div>
-        <div class="message">jangan pernah takut dengan 
-        undang undang jangan jadi budak undang-undang</div>
-        <div class="message"> FUCK YOU Never challenge me</div>
-        <div class="date">Attack dilakukan pada hari selasa 12/8/2025</div>
-        
-        <div class="team-name">[#] STEM-EAGLE ERROR SYSTEM</div>
-        <div class="team-name">ETHERSEC TEAM - Xenowhtr11</div>
-        
-        <div class="music-player">
-            <audio controls autoplay loop>
-                <source src="https://github.com/DyffaV1/Allgame123/raw/154c216340a255dc884b4953618a71fbf7e4b78b/SaveTik.co_7339593559957458208.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+        <div class="deface-section">
+            <h1 class="hacker-title">Hacked by OhmyNova044</h1>
+            
+            <div class="warning-banner">
+                <div class="warning-label">[ SYSTEM WARNING ]</div>
+                <div class="warning-message">What you ignore today will control you tomorrow.</div>
+                <div class="warning-message">Fix the weakness… before the weakness consumes everything.</div>
+            </div>
+            
+            <div class="message-list">
+                <ul>
+                    <li>Demi kebebasan informasi!</li>
+                    <li>Your negligence is our entry point.</li>
+                    <li>This is a wake-up call, not just an attack.</li>
+                    <li>Fighting for a cause, one byte at a time.</li>
+                    <li>Security vulnerability exposed. You're welcome.</li>
+                </ul>
+            </div>
+            
+            <div class="hashtag-container">
+                <span class="hashtag">#muslimCyber</span>
+                <span class="hashtag">#umatmuhammad</span>
+                <span class="hashtag">#ohmyNova04</span>
+                <span class="hashtag">#OhmyCyber04</span>
+            </div>
+            
+            <div class="syahadat-box">
+                <div class="syahadat-text">
+                    أشهد أن لا إله إلا الله وأشهد أن محمدًا رسول الله
+                </div>
+            </div>
         </div>
-    </div>
-
-    <script>
-        // White matrix effect
-        const canvas = document.getElementById('matrix');
-        const ctx = canvas.getContext('2d');
-        
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        
-        const chars = "";
-        const fontSize = 18;
-        const columns = canvas.width / fontSize;
-        
-        const drops = [];
-        for (let i = 0; i < columns; i++) {
-            drops[i] = Math.random() * canvas.height / fontSize;
-        }
-        
-        function draw() {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-            ctx.fillStyle = "#ffffff";
-            ctx.font = fontSize + "px monospace";
-            
-            for (let i = 0; i < drops.length; i++) {
-                const text = chars[Math.floor(Math.random() * chars.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-                
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                
-                drops[i]++;
-            }
-        }
-        
-        setInterval(draw, 33);
-
-        // Random flicker effect for elements
-        const elements = document.querySelectorAll('.message, .date, .team-name');
-        setInterval(() => {
-            elements.forEach(item => {
-                if (Math.random() > 0.85) {
-                    item.style.opacity = Math.random() * 0.7 + 0.3;
-                    item.style.textShadow = `0 0 ${Math.random() * 20}px currentColor`;
-                } else {
-                    item.style.opacity = 1;
-                    item.style.textShadow = 'none';
-                }
-            });
-        }, 300);
-    </script>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="hacker-footer">
+        <p class="footer-text">Hacked by OhmyNova044</p>
+    </footer>
 </body>
 </html>
